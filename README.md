@@ -1,1 +1,1 @@
-# [For Live App Demo](https://responsive-travel-grid.netlify.app)
+# [For Live Demo](https://responsive-travel-grid.netlify.app)
