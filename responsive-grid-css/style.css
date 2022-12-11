@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&display=swap'); 
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alegreya', serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-height: 100vh;
+    background: rgb(27, 27, 27);
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: #fff; }
+
+.container {
+    margin: 40px;
+    grid-auto-flow: dense;
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: minmax(300px, auto);
+}
+
+.container .box {
+    background: rgba(51, 51, 51, 0.699);
+    display: grid;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    place-items: center;
+    color: #fff;
+    transition: 0.6s;
+}
+
+.container .box:hover {
+    background: #127554;
+}
+
+.container .box img {
+    position: relative;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.container .box:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.container .box:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.container .box:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.container .box:nth-child(5) {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+.box {
+    border: 1px solid;
+    border-color: darkgrey;
+    border-radius: 8px;
+}
+
+@media (max-width: 991px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+    }
+    .container .box {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+    
+}
